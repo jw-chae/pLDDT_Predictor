@@ -26,7 +26,7 @@ conda activate plddt_predictor
 
 ### Usage
 
-#### For Trial Run (Small Dataset):
+#### For Trial Run (for single Dataset):
 
 To run the model with default paths and hyperparameters, simply execute the following command without any additional arguments:
 
@@ -34,12 +34,7 @@ To run the model with default paths and hyperparameters, simply execute the foll
 python predict.py
 ```
 
-By default, the following files and settings will be used:
-- Input file: `plddt_predictor/sample_data/sampled_protein_data.json`
-- Output file: `plddt_predictor/sample_data/test_output.json`
-- Model file: `plddt_predictor/saved_models/protein_gat_transformer1024_best_model.pth`
-
-#### Custom Parameters:
+#### Custom Parameters(large scale json file prediction):
 
 To specify custom file paths and hyperparameters, use the following format:
 
@@ -47,7 +42,7 @@ To specify custom file paths and hyperparameters, use the following format:
 python predict.py --input_json_path your_input_file.json \
                   --output_json_path your_output_file.json \
                   --model_path your_model.pth \
-                  --hidden_dim 512 --num_heads 8 --num_layers 4 --dropout 0.2
+                  --hidden_dim 1024 --num_heads 16 --num_layers 8 --dropout 0.1
 ```
 
 **Parameters Explanation:**
@@ -59,6 +54,12 @@ python predict.py --input_json_path your_input_file.json \
 - `--num_layers`: Number of layers in the Transformer model.
 - `--dropout`: Dropout rate for the Transformer model.
 
+  
+By default, the following files and settings will be used:
+- Input file: `plddt_predictor/sample_data/sampled_protein_data.json`
+- Output file: `plddt_predictor/sample_data/test_output.json`
+- Model file: `plddt_predictor/saved_models/protein_gat_transformer1024_best_model.pth`
+- 
 #### Example Command:
 
 ```bash
