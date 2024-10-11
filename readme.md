@@ -24,6 +24,11 @@ conda env create -f environment.yml
 conda activate plddt_predictor
 ```
 
+If there is a problem with the esm, you can install the following additional files to resolve it.
+
+```bash
+!pip install torch-geometric fair-esm==2.0.0
+```
 ### Usage
 
 #### For Trial Run (for single Dataset):
