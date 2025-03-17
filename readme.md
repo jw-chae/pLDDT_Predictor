@@ -1,4 +1,5 @@
-
+# Notice
+we found that the pt file overfitted, Do not use this repository now, We will notice after the pretrained file fixed 
 # pLDDT-Predictor
 ![Figures](./figures/architecture.png)
 
